@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>プログラミングでサービスを考える</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h2>pythonでスケジュール管理</h2>
+    pythonでスケジュール管理ができるプログラミングを提案する。<br>
+    pythonに含まれるdateutilというライブラリを利用する。
+    <h3>プログラミングソースコード</h3>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">from dateutil.parser import parse</li>
+        <li style="background-color:#EEF;">from dateutil.relativedelta import relativedelta</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">event_date = input("YYYY-MM-DD TI:MEでイベントの日付を入力してください")#入力例 2023-11-06 15:45</li>
+        <li style="background-color:#EFF;">today = input("YYYY-MM-DDで今日の日付を入力してください") #入力例 2023-12-25</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"># イベントまでの日数を計算</li>
+        <li style="background-color:#EEF;">time_until_event = event_date - today</li>
+        <li style="background-color:#EFF;">print(f"イベントまで {time_until_event} 残り")</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"># イベント日を変更</li>
+        <li style="background-color:#EEF;">new_event_date = event_date + relativedelta(days=7)</li>
+        <li style="background-color:#EFF;">print(f"イベント日を変更: {new_event_date}")</li>
+        </ol></code>
+        <h3>機能の説明</h3>
+        イベントの日付・時間と今日の日付を入力したら、イベントまでの日数が出てくる。
+        <h3>実際の使用</h3>
+        イベントの日付と今日の日付を自分で入力するように変更したが、下の写真のようにエラーが起きてしまった。<br>
+        <img src="../de12/images/1106e 2023-11-06 163321.png" width="40%">
+        <h3>参照</h3>
+        <a href="https://chat.openai.com/c/0b0d5cf5-3189-4a59-b413-d9068c9a0f71">参照URL</a> ＊2番目のものを引用
+</body>
+</html>
+    
